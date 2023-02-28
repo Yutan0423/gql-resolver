@@ -4,3 +4,6 @@ dev:
 
 studio:
 	@npx prisma studio
+
+down:
+	@docker-compose down
