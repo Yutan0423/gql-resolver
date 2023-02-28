@@ -2,8 +2,15 @@ dev:
 	@docker-compose up -d
 	@yarn dev
 
+init:
+	$(MAKE) install
+	$(MAKE) migrate
+
 install:
 	@yarn
+
+migrate:
+	@npx prisma migrate dev --name init
 
 studio:
 	@npx prisma studio
