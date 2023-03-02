@@ -85,9 +85,8 @@ const TodoList: FC = () => {
         {todos &&
           todos.map((todo) => (
             <li className={`${todo.completed && 'line-through'}`} key={todo.id}>
-              <span>
-                {todo.completed ? '🙌' : '💪'} {todo.title}
-              </span>{' '}
+              <span>{todo.completed ? '🙌 ' : '💪 '}</span>
+              <span>{todo.title}</span>{' '}
               <input
                 className="cursor-pointer"
                 type="checkbox"

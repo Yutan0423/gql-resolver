@@ -17,3 +17,12 @@ studio:
 
 down:
 	@docker-compose down
+
+lint:
+	@yarn lint
+
+check:
+	@yarn typecheck
+
+test:
+	@yarn test
